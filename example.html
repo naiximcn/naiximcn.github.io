@@ -1,0 +1,176 @@
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+        <meta name="wechat-enable-text-zoom-em" content="true">
+        <title>奶昔滴小网站捏 | Example Page</title>
+        <link rel="stylesheet" href="./assets/style/ui.css">
+        <link rel="stylesheet" href="./assets/style/example.css">
+        <style>
+/* 控制器 */
+.wah-controls {
+  position: fixed;
+  z-index: 100000;
+  bottom: 50px;
+  right: constant(safe-area-inset-right);
+  right: env(safe-area-inset-right);
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  overflow: hidden;
+}
+.wah-control {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* 热区蓝字 */
+.wah-hotarea-size {
+  z-index: 99999;
+  font-size: 10px;
+  background: rgba(0, 0, 255, 0.5);
+  color: #FFF;
+}
+
+/* 读屏红框 */
+.wah-reading-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+.wah-reading-outline {
+  position: absolute;
+  z-index: 99999;
+  transform: translateZ(999999px);
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  background: rgba(100, 0, 0, 0.3);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  word-break: break-all;
+}
+        </style>
+    </head>
+    <boby>
+        <div class="page article js_show" tabindex="-1">
+            <article class="ui-article">
+                <h1>文章页大标题</h1>
+                <section>
+                    <h2>二级标题</h2>
+                    <section>
+                        <h3>三级标题</h3>
+                        <section>
+                            <h4>四级标题</h4>
+                            <p>
+                                示例文字.
+                            </p>
+                            <p>
+                                <img align="center" src="./images/naixi.jpg" alt="示例JPG">
+                                <img align="center" src="./images/github.gif" alt="示例GIF">
+                            </p>
+                        </section>
+                        <section>
+                            <h4>列表示例</h4>
+                            <section>
+                                <h5>原生无序列表</h5>
+                                <ul>
+                                    <li>文本一</li>
+                                    <li>
+                                        套列表标题
+                                        <ul>
+                                            <li>文本一</li>
+                                            <li>文本二</li>
+                                            <li>文本三</li>
+                                        </ul>
+                                    </li>
+                                    <li>文本二</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h5>原生有序列表</h5>
+                                <ol>
+                                    <li>文本一</li>
+                                    <li>
+                                        套列表标题
+                                        <ol>
+                                            <li>文本一</li>
+                                            <li>文本二</li>
+                                            <li>文本三</li>
+                                        </ol>
+                                    </li>
+                                    <li>文本二</li>
+                                </ol>
+                            </section>
+                            <section>
+                                <h5>原生段落列表（需要自行添加class）</h5>
+                                <ol class="ui-article__list_inside">
+                                    <li>段落一</li>
+                                    <li>
+                                        套段落
+                                        <ol>
+                                            <li>段落一</li>
+                                            <li>段落二</li>
+                                            <li>段落三</li>
+                                        </ol>
+                                    </li>
+                                    <li>段落二</li>
+                                </ol>
+                            </section>
+                            <section>
+                                <h5>自定义序号列表（需要自行添加class）</h5>
+                                <ol class="ui-article__list_none">
+                                    <li>1 文本一</li>
+                                    <li>
+                                        2 套列表标题
+                                        <ol>
+                                            <li>1 文本一</li>
+                                            <li>2 文本二</li>
+                                            <li>3 文本三</li>
+                                        </ol>
+                                    </li>
+                                    <li>3 文本二</li>
+                                </ol>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section>
+                    <h2>无障碍焦点整合示例</h2>
+                    <section>
+                        <p class="ui-a11y-combo">
+                            <input class="ui-a11y-combo__helper" aria-labelledby="txt1 txt2" type="text" readonly="" role="option">
+                            <span id="txt1" class="ui-a11y-combo__content" aria-hidden="true">示例文本</span>
+                            <a id="txt2" class="ui-a11y-combo__content ui-link ui-wa-hotarea " href="#">焦点</a>
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <h2>超链接示例</h2>
+                    <section>
+                        <a class="ui-link" href="https://naiximcn.github.io"><span>文本</span></a>
+                    </section>
+                </section>
+                <section>
+                    <div class="ui-msg__extra-area">
+                        <div class="ui-footer">
+                            <p class="ui-footer__links">
+                                <img align="left" src="./images/studio.png" alt="Xixi Cloud Studio">
+                                <a href="https://naiximcn.github.io" class="ui-wa-hotarea ui-footer__link">奶昔滴网站</a>
+                            </p>
+                            <p class="ui-footer__text">Copyright © 2019-2022 Xixi Cloud Studio Page powered with Github Page UI powered with WeUi</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </boby>
+</html>

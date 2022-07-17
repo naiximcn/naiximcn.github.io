@@ -1,0 +1,77 @@
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+        <meta name="wechat-enable-text-zoom-em" content="true">
+        <title>奶昔滴小网站捏 | 关于</title>
+        <link rel="stylesheet" href="./assets/style/ui.css">
+        <link rel="stylesheet" href="./assets/style/example.css">
+        <style>
+/* 控制器 */
+.wah-controls {
+  position: fixed;
+  z-index: 100000;
+  bottom: 50px;
+  right: constant(safe-area-inset-right);
+  right: env(safe-area-inset-right);
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  overflow: hidden;
+}
+.wah-control {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* 热区蓝字 */
+.wah-hotarea-size {
+  z-index: 99999;
+  font-size: 10px;
+  background: rgba(0, 0, 255, 0.5);
+  color: #FFF;
+}
+
+/* 读屏红框 */
+.wah-reading-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+.wah-reading-outline {
+  position: absolute;
+  z-index: 99999;
+  transform: translateZ(999999px);
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  background: rgba(100, 0, 0, 0.3);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  word-break: break-all;
+}
+        </style>
+    </head>
+    <boby>
+        <hr>
+        <section>
+            <div class="ui-msg__extra-area">
+                <div class="ui-footer">
+                    <p class="ui-footer__links">
+                        <img align="left" src="./images/studio.png" alt="Xixi Cloud Studio">
+                        <a href="https://naiximcn.github.io" class="ui-wa-hotarea ui-footer__link">奶昔滴网站</a>
+                    </p>
+                    <p class="ui-footer__text">Copyright © 2019-2022 Xixi Cloud Studio Page powered with Github Page UI powered with WeUi</p>
+                </div>
+            </div>
+        </section>
+    </boby>
+</html>
